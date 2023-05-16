@@ -1,4 +1,4 @@
-const db = require('../../data/db-config')
+const db = require('../../data/db-config');
 
 /*
   If `scheme_id` does not exist in the database:
@@ -34,7 +34,7 @@ const validateScheme = (req, res, next) => {
   ) {
     next({ message: "invalid scheme_name", status: 400 })
   } else {
-    next()
+    next();
   }
 }
 
@@ -56,7 +56,7 @@ const validateStep = (req, res, next) => {
     typeof step_number !== 'number' ||
     step_number < 1
   ) {
-    next({ message: "invalid scheme_name", status: 400 });
+    next({ message: "invalid step", status: 400 });
 
   } else {
     next();
